@@ -151,7 +151,6 @@ if (
     updateUIForPushPermissionRequired();
 }
 
-
 function getToken() {
     messaging.requestPermission()
         .then(function() {
@@ -159,7 +158,6 @@ function getToken() {
             // subsequent calls to getToken will return from cache.
             messaging.getToken()
                 .then(function(currentToken) {
-
                     if (currentToken) {
                         sendTokenToServer(currentToken);
                         updateUIForPushEnabled(currentToken);
